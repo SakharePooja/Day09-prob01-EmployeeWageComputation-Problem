@@ -2,7 +2,7 @@
 
 isPresent=$((RANDOM%3));
 perHourWage=20;
-workingHour=8;
+day_Hr=8;
 
 if [ $isPresent -eq 0 ]
 then
@@ -12,11 +12,11 @@ then
 elif [ $isPresent -eq 1 ]
 then
 	echo "Empolyee is present";
-	workingHour=8;
+	workingHour=$day_Hr;
 else 
 	echo "Empolyee is working as part time";
-	workingHour=4;
+	workingHour=$(( $day_Hr/2 ));
 fi
 
 wage=$(($perHourWage * $workingHour));
-echo "Empolyee has earned $wage $ today";
+echo "Empolyee has earned $wage today";
