@@ -3,6 +3,7 @@
 isPresent=$((RANDOM%3));
 perHourWage=20;
 day_Hr=8;
+daysOf_Month=20;
 
 case $isPresent in
 	0)  
@@ -22,3 +23,5 @@ esac
 
 wage=$(($perHourWage * $workingHour));
 echo "Empolyee has earned $wage today";
+Month_wage=$(($wage * daysOf_Month));
+echo "Empolyee has earned $Month_wage";
